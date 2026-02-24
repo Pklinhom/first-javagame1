@@ -45,6 +45,7 @@ body {
     padding:  10px 20px;
     border-radius: 25px;
     position: relative;
+    margin: 10px;
 }
 
 .mid-section h4{
@@ -75,10 +76,15 @@ body {
 
 .next-level-info{
     position: absolute;
-    right: -105px;
+    right: -110px;
     background-color: gray;
     height: 80px;
     width: 100px;
     text-align: center;
     border-radius: 25px;
+    display: none;
+}
+
+.upgrade:hover .next-level-info {
+    display:  block;
 }
