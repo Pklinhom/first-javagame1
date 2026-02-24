@@ -1,11 +1,17 @@
 let gem = document.querySelector('.gem-cost')
 let parsedGem = parseFloat(gem.innerHTML)
-
+//Clicker Let
 let clickerCost = document.querySelector(".clicker-cost")
 let parsedClickerCost = parseFloat(clickerCost.innerHTML)
 let clickerLevel = document.querySelector(".clicker-level");
 let clickerIncrease = document.querySelector(".clicker-increase");
 let pasrsedClickerIncrease = parseFloat(clickerIncrease.innerHTML)
+//Pickaxe Let
+let pickaxeCost = document.querySelector(".pickaxe-cost")
+let parsedPickaxeCost = parseFloat(pickaxeCost.innerHTML)
+let pickaxeLevel = document.querySelector(".pickaxe-level");
+let pickaxeIncrease = document.querySelector(".pickaxe-increase");
+let pasrsedPickaxeIncrease = parseFloat(pickaxeIncrease.innerHTML)
 
 
 let gpc = 1;
@@ -34,5 +40,20 @@ function buyClicker(){
 
         parsedClickerCost *= 1.55;
         clickerCost.innerHTML = Math.round(parsedClickerCost)
+    }
+}
+
+function buyPickaxe(){
+    if (parsedGem >= parsedPickaxeCost){
+        gem.innerHTML = Math.round(parsedGem -= parsedPickaxeCost);
+
+        pickaxeLevel.innerHTML ++
+
+        pasrsedPickaxeIncrease = parseFloat((pasrsedPickaxeIncrease * 1.35).toFixed(2))
+        pickaxeIncrease.innerHTML = pasrsedPickaxeIncrease
+        gpc += pasrsedPickaxeIncrease
+
+        parsedPickaxeCost *= 1.75;
+        pickaxeCost.innerHTML = Math.round(parsedPickaxeCost)
     }
 }
