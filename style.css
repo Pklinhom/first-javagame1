@@ -46,7 +46,20 @@ body {
     border-radius: 25px;
     position: relative;
     margin: 10px;
+
+
 }
+
+.upgrade:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.upgrade:active{
+    opacity: 0.65;
+    transform: scale(1.025);
+}
+
 
 .mid-section h4{
     margin: 0;
